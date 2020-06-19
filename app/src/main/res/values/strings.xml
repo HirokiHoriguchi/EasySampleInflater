@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">EasySampleInflater</string>
+    <string name="app_name">YourAppName</string>
+    <string name="button">Button</string>
+    <string name="description">テツくん</string>
+    <string name="text">テツの一日</string>
+    <string name="contents">
+            "日付：\n"
+            "20XX年XX月YY日\n"
+            "会場：\n"
+            "東京都XX区ZZ Bスタジオ\n\n"
+            "第1部：10時00分～11時00分\n"
+            "（テツくんお披露目！）\n"
+            "第2部：11時15分～12時15分\n"
+            "（テツくんとゲーム！）\n"
+            "握手会\n"
+            "12時30分～13時00分\n"
+            "（テツくんご飯タイム）\n"
+            "第3部："
+            "14時00分～15時00分\n"
+            "（テツくんのお昼寝）\n"
+            "第4部："
+            "15時15分～16時15分\n"
+            "(テツくん握手会)"
+    </string>
 </resources>

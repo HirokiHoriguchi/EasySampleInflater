@@ -20,7 +20,15 @@ Note: This class is not thread-safe and a given instance should only be accessed
 Activity.getLayoutInflater()  
 Context#getSystemService
 ```
-これらを使う。
+これらのどちらかを使う。
 - 2文目。factoryがプロジェクトと読み替えて良いのかな？まあ、2つのメソッドを使え的な話し。クローンするらしい。
-- 3文目。inglaterはパフォーマンス的に、XMLファイルがビルド時行う過程に大きく依存するらしい。だから、ただのxmlファイルに対してLayoutInflaterとXmlPullParserを使うのは不可能的な話し。だから、
+- 3文目。inglaterはパフォーマンス的に、XMLファイルがビルド時行う過程に大きく依存する。だから、ただのxmlファイルに対してLayoutInflaterとXmlPullParserを使うのは現状では不可能ですよって話。LayoutInflaterは、AmlPullParserがコンパイルされたレスースから戻されたときに飲み働くらしい。つまり、働く順序があるから同時に使うことができないよねってことでOKっぽい。
+
+
+気づいてしまった。これがやっているのって、あらかじめ作ってあるレウアウトを再利用したいぞ！よし！インスタンス化しちゃえば良いじゃん！あれれ、インスタンス化はしちゃいけないみたいだ！なになに？代わりにActivity.getLayoutInflaterかContext#getSYstemServiceを使えば良いらしいぞ！なんでかはわからんけども。。。ここの深掘りは実務でやれば良きです。。
+
+
+2. 実際に写経してみてそれっぽいものを作ってみる。
+
+
 
